@@ -1,65 +1,53 @@
-import React from 'react'
-import local from './../assets/local';
-import earnig_svg from '../assets/svg/money-recive.svg'
-import balance_svg from '../assets/svg/wallet-money.svg'
-import sales_svg from '../assets/svg/bag.svg'
-import arrow_up from '../assets/svg/arrow-up.svg'
-import arrow_down from '../assets/svg/arrow-down.svg'
-import '../scss/Dashboard.scss'
+import React from "react";
+import "../scss/Dashboard.scss";
+import dashLocal from "../assets/dashLocal";
+const user = 'Evan'
+const names = Object.values(dashLocal.data.name);
+const svg = Object.values(dashLocal.data.svgElement)
 
-const name = "{name}";
-const this_mouth =" this mount";
+// const first = () =>{
+//   for (let i = 0; i < 3; i++) {
+//     let element = dashLocal.data.money[i];
+//     let element2 = dashLocal.data.name[i];
+//     let element3 = dashLocal.data.svgElement[i];
+//     return <div>{element + element2 + element3}</div>
+//   }
+// }
+
+// const NameList = dashLocal.data.name[i]
+// const ListItems1 = NameList.map((NameList: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined) => 
+//   <div>{NameList}</div>
+// )
+
+const ItemsList = dashLocal.data;
+const  arrList = [];
+for (let i = 0; i < ItemsList.name.length; i++) {
+  const element = ItemsList.name[i];
+  
+}
+const NameItems = ItemsList.name.map((NameItem: any) => 
+  <div >{NameItem}</div>
+);
+const svgItems = ItemsList.svgElement.map((SvgItem: any) => 
+  <div>{SvgItem}</div>
+);
+const moneyItems = ItemsList.money.map((MoneyItem: any) => 
+  <div>{MoneyItem}</div>
+);
 
 const Main = () => {
   return (
-    <div style={{flex:'2'}}>
-      <div className="container_dashboard">
-        <div className="header_dashboard">Hello {name} 👋🏼,</div>
-        <div className="earnig_dashboard">
-          
-          <div className="earning_item">
-              <div className="svg_div">
-                <img src={earnig_svg} alt="earnig_svg" className='earnig_item_logo'/>
-              </div>
-              <div className="earning_content">
-                <span className='earning_title'>Earning</span><br />
-                <span className='earning_number'>$198k</span><br />
-                <span className='earning_mount'><img src={arrow_up} alt="" /><span className='procent_green'>37.8%</span>{this_mouth}</span>
-              </div>
-              
-          </div>
-          <div className="balance_item">
-            <div className="svg_div">
-              <img src={balance_svg} alt="balance_svg" className='balance_item_logo'/>
-            </div>
-              <div className="balance_content">
-                <span className='balance_title'>Balance</span><br />
-                <span className='balance_number'>$2.4k</span><br />
-                <span className='balance_mount'><img src={arrow_down} alt="" /><span className='procent_red'>2%</span>{this_mouth}</span>
-              </div>
-            
-          </div>
-          <div className="sales_item">
-            <div className="svg_div">
-              <img src={sales_svg} alt="sales_svg" className='sales_item_logo'/>
-            </div>
-              <div className="sales_content">
-                <span className='sales_title'>Total Sales</span><br />
-                <span className='sales_number'>$89k</span>
-                <span className='sales_mount'><img src={arrow_up} alt="" /><span className='procent_green'>11%</span>{this_mouth}</span>
-              </div>
-            
-          </div>
-        </div>
-
+    <div style={{ flex: "2" }}>
+      <header>
+        <h1>{`Hello 👋 ${user}`}</h1>
+      </header>
+      <main>
+      <div className="stat-block">
+      {NameItems}
       </div>
-
-    <div  >
-
+      </main>
     </div>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Main
+export default Main;

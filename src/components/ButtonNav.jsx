@@ -4,7 +4,7 @@ import local from "../assets/local.ts";
 import { NavLink } from 'react-router-dom';
 
 
-const ButtonNav = (img) => {
+const ButtonNav = () => {
   const [btnState, setBtnState] = useState(false);
 
   const svg = local[0].svg.map((unit) => unit);
