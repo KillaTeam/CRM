@@ -8,7 +8,7 @@ const Main = () => {
 
 
   return (
-    <div style={{flex:'2'}}>
+    <div style={{flex:'2 0 100%'}}>
       <div className="container_dashboard">
         <div className="header_dashboard">Hello Your_name 👋🏼,</div>
         

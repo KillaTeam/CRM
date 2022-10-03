@@ -10,11 +10,11 @@ import {initLocal} from '../types/local'
    
 
 
-const local:initLocal[] =[
+const local: initLocal =
     {
     buttons:['Dashboard','Products','Customers','Income','Promote','Help'],
     svg:[dashboard,products,customers,income,promote,help],
     to:['/dashboard','/products','/customers','/income','/promote','/help']
-    }] 
+    }
 
 export default local
