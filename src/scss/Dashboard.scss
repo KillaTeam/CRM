@@ -26,7 +26,7 @@
         justify-content: space-around;
         
 
-        .earning_item{
+        .earning_item, .balance_item, .sales_item{
             margin: 0;
             padding: 0;
             display: flex;
@@ -36,20 +36,16 @@
             max-height: 84px;
             
             
-            .earning_content{
-                display: flex;
-                flex-direction: column;
+            .earning_content ,.balance_content, .sales_content{
                 padding-left: 20px;
             }
-
             
-            
-            .earning_number{
+            .earning_number, .balance_number, .sales_number{
                 color:#333333;
                 font-size: 34px;
                 font-weight: 600;
             }
-            .earning_mount{
+            .earning_mount, .balance_mount, .sales_mount{
                 display: flex;
                 align-items: center;
                 font-weight: 400;
@@ -66,17 +62,18 @@
         }
 
         .earnig_item_logo{
+
             padding: 21px;
             border-radius: 50%;
             
         }
-        .green{
+        .earnig_item_logo{
             background: linear-gradient(201.18deg, #c9ffe1 3.14%, #EFFFF6 86.04%);
         }
-        .blue{
+        .balance_item_logo{
             background: linear-gradient(201.18deg, #CAF1FF 3.14%, #CDF4FF 86.04%);
         }
-        .red{
+        .sales_item_logo{
             background: linear-gradient(201.18deg, #FFA3CF 3.14%, #FFD5F3 86.04%);
         }
     }
