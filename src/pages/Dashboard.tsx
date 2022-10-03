@@ -1,6 +1,6 @@
 import React from 'react'
 import EarningList from '../components/EarningList'
-import dashLocals from '../data/Dashboard_item_money'
+import dashLocals from '../data/Dashboard/Dashboard_item_money'
 import '../scss/Dashboard.scss'
 
 
@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <div style={{flex:'2'}}>
       <div className="container_dashboard">
-        <div className="header_dashboard">Hello name 👋🏼,</div>
+        <div className="header_dashboard">Hello Your_name 👋🏼,</div>
         
         <EarningList dashLocals={dashLocals}></EarningList>
         

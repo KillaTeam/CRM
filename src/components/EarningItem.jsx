@@ -10,7 +10,7 @@ const EarningItem = (props) => {
             <div className="earning_content">
                 <span className='earning_title'>{props.dashLocal.name}</span>
                 <span className='earning_number'>${props.dashLocal.money / 1000}k</span>
-                <div className='earning_mount'><img src={props.dashLocal.up || props.dashLocal.down} alt="" /><span className='procent_green'>{props.dashLocal.procents}%</span> is this mouth</div>
+                <div className='earning_mount'><img src={props.dashLocal.up || props.dashLocal.down} alt="" /><span className={props.dashLocal.procents_color}>{props.dashLocal.procents}%</span> is this mouth</div>
             </div>
         </div>
     )
