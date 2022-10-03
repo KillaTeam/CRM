@@ -1,44 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.main_container{
+    
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 .container_dashboard{
     font-family: Poppins, sans-serif;
     display: flex;
     flex-wrap: wrap;
     margin-left: 50px;
     width: 90%;
-    flex-direction: column;
 
     .header_dashboard{
         width: 100%;
         margin-top: 41px;
         margin-bottom: 24px;
+        margin-right: 50px;
 
         font-size: 24px;
         font-weight: 500;
-        
-        justify-items: flex-start;
-        *{
-            background-color: #f8fafe;
-        }
+        background-color: #f8fafe;
     }
 
     .earnig_dashboard{
         display: flex;
-        width: 80%;
-        border-radius: 20px;
-        background-color: #f8fafe;
+
+        width: 100%;
+        border-radius: 30px;
         justify-content: space-evenly;
-        
+        background-color: #ffffff;
 
         .earning_item{
-            margin: 0;
-            padding: 0;
             display: flex;
-            margin-left: 63px;
+            
             margin-top: 32px;
             margin-bottom: 35px;
             max-height: 84px;
-            
-            
+
             .earning_content{
                 display: flex;
                 flex-direction: column;
@@ -87,46 +92,93 @@
         font-size: 14px;
         color: #ACACAC;
     }
+// Second block
     .second_block_container{
         display: flex;
-        padding-top: 24px;
-        padding-left: 38px;
+    }
 
-        .overview_content{
-            width: 378px;
-            margin-right: 36px;
+    .overview_container{
+        margin-top: 20px;
+        width: 628px;
+        height: 378px;
+        background-color: #FFFFFF;
+        border-radius: 30px;
+        line-height: 0px;
 
-            .overview_top{
+        .overview_top{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-top: 20px;
+            
+            
+            .overview_top_text{
+                color: #ACACAC;
+                font-size: 14px;
+                padding-left: 35px;
+                
+                h1{
+                    font-size: 25px;
+                    font-weight: 600;
+                    color: black;
+                    line-height: 33px;
+                }
+            }
+            .overview_top_button{
                 display: flex;
-                justify-content: space-between;
+
+                justify-content: center;
                 align-items: center;
 
-                .overview_menu{
-                    background: #F9FBFF;
-                    border-radius: 10px;
+                font-size: 14px;
+                font-weight: 400;
+                color: #7E7E7E;
 
-                    .overview_menu_text{
-                        margin-right: 18px;
-                        font-size: 14px;
-                        font-weight: 400;
-                        color:#7E7E7E;
-                    }
+                margin-right: 35px;
+                background-color: #F9FBFF;
+                height: 38px;
+                width: 118px;
+                border-radius: 10px;
+                
+                span{
+                    padding-right: 18px;
                 }
             }
         }
-        .overview_title{
+        .overview_grafic{
             display: flex;
-            flex-direction: column;
-            font-weight: 600;
-            font-size: 24px;
+            flex-direction: row;
+            justify-content: center;
+
+            .stats_div{
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 255px;
+                
+                width: 45px;
+                .stats_mouth{
+                    display: flex;
+
+                    justify-content: center;
+                    width: 31px;
+                    margin-top: 10px;
+                    font-size: 10px;
+                    font-weight: 500;
+                    color: #4F4F4F;
+                    font-style: normal;
+                }
+                .stats_stolb{
+                    background-color: #F2EFFF;
+                    border-radius: 8px;
+                    width: 31px;
+                    height: 111px;
+                }
+            }
         }
-        .ractangle_value{
-            width: 31px;
-            margin-right: 16px;
-            background-color: #F2EFFF;
-            border-radius: 8px;
-        }  
     }
+
 }
 
 @media only screen and (max-width: 600px) {
