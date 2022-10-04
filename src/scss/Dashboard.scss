@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-<<<<<<< HEAD
-=======
-.main_container{
-    
-}
->>>>>>> 6035692d2e3cd274539b7875ff85a64173b068ac
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;
@@ -17,16 +11,10 @@ button, input[type="submit"], input[type="reset"] {
 .container_dashboard{
     font-family: Poppins, sans-serif;
     display: flex;
-<<<<<<< HEAD
     margin-left: 50px;
     justify-content: center;
     flex-direction: column;
     margin-right: 50px;
-=======
-    flex-wrap: wrap;
-    margin-left: 50px;
-    width: 90%;
->>>>>>> 6035692d2e3cd274539b7875ff85a64173b068ac
 
     main{
         display: flex;
@@ -49,11 +37,7 @@ button, input[type="submit"], input[type="reset"] {
 
         width: 100%;
         border-radius: 30px;
-<<<<<<< HEAD
         justify-content: space-around;
-=======
-        justify-content: space-evenly;
->>>>>>> 6035692d2e3cd274539b7875ff85a64173b068ac
         background-color: #ffffff;
 
         .earning_item{
@@ -111,104 +95,7 @@ button, input[type="submit"], input[type="reset"] {
         font-size: 14px;
         color: #ACACAC;
     }
-<<<<<<< HEAD
 }
 .rdn{
     min-width: 200px;
 }
-=======
-// Second block
-    .second_block_container{
-        display: flex;
-    }
-
-    .overview_container{
-        margin-top: 20px;
-        width: 628px;
-        height: 378px;
-        background-color: #FFFFFF;
-        border-radius: 30px;
-        line-height: 0px;
-
-        .overview_top{
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding-top: 20px;
-            
-            
-            .overview_top_text{
-                color: #ACACAC;
-                font-size: 14px;
-                padding-left: 35px;
-                
-                h1{
-                    font-size: 25px;
-                    font-weight: 600;
-                    color: black;
-                    line-height: 33px;
-                }
-            }
-            .overview_top_button{
-                display: flex;
-
-                justify-content: center;
-                align-items: center;
-
-                font-size: 14px;
-                font-weight: 400;
-                color: #7E7E7E;
-
-                margin-right: 35px;
-                background-color: #F9FBFF;
-                height: 38px;
-                width: 118px;
-                border-radius: 10px;
-                
-                span{
-                    padding-right: 18px;
-                }
-            }
-        }
-        .overview_grafic{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-
-            .stats_div{
-                display: flex;
-                flex-direction: column-reverse;
-                justify-content: flex-start;
-                align-items: flex-start;
-                height: 255px;
-                
-                width: 45px;
-                .stats_mouth{
-                    display: flex;
-
-                    justify-content: center;
-                    width: 31px;
-                    margin-top: 10px;
-                    font-size: 10px;
-                    font-weight: 500;
-                    color: #4F4F4F;
-                    font-style: normal;
-                }
-                .stats_stolb{
-                    background-color: #F2EFFF;
-                    border-radius: 8px;
-                    width: 31px;
-                    height: 111px;
-                }
-            }
-        }
-    }
-
-}
-
-// @media only screen and (max-width: 600px) {
-//     .container_dashboard{
-//         flex-wrap: nowrap;
-//     }
-//   }
->>>>>>> 6035692d2e3cd274539b7875ff85a64173b068ac
