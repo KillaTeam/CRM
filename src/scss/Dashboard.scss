@@ -1,57 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 .container_dashboard{
     font-family: Poppins, sans-serif;
     display: flex;
-    flex-wrap: wrap;
-    margin-left: 71px;
-    width: 90%;
+    margin-left: 50px;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 50px;
 
-
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     .header_dashboard{
         width: 100%;
         margin-top: 41px;
         margin-bottom: 24px;
+        margin-right: 50px;
 
         font-size: 24px;
         font-weight: 500;
-        background-color: #ffffff;
-
-        justify-items: flex-start;
+        background-color: #f8fafe;
     }
 
     .earnig_dashboard{
         display: flex;
-        width: 80%;
-        justify-content: space-around;
-        
 
-        .earning_item, .balance_item, .sales_item{
-            margin: 0;
-            padding: 0;
+        width: 100%;
+        border-radius: 30px;
+        justify-content: space-around;
+        background-color: #ffffff;
+
+        .earning_item{
             display: flex;
-            margin-left: 63px;
+            
             margin-top: 32px;
             margin-bottom: 35px;
             max-height: 84px;
-            
-            
-            .earning_content ,.balance_content, .sales_content{
-                padding-left: 20px;
+
+            .earning_content{
                 display: flex;
                 flex-direction: column;
-            }
-
-            .earning_title, .balance_title, .sales_title{
-                font-weight: 400;
-                color: #ACACAC;
+                padding-left: 20px;
             }
             
-            .earning_number, .balance_number, .sales_number{
+            .earning_number{
                 color:#333333;
                 font-size: 34px;
                 font-weight: 600;
             }
-            .earning_mount, .balance_mount, .sales_mount{
+            .earning_mount{
                 display: flex;
                 align-items: center;
                 font-weight: 400;
@@ -67,26 +74,28 @@
             }
         }
 
+        .earnig_item_logo{
 
-        .earnig_item_logo, .balance_item_logo, .sales_item_logo{
             padding: 21px;
             border-radius: 50%;
             
         }
-        .earnig_item_logo{
+        .green{
             background: linear-gradient(201.18deg, #c9ffe1 3.14%, #EFFFF6 86.04%);
         }
-        .balance_item_logo{
+        .blue{
             background: linear-gradient(201.18deg, #CAF1FF 3.14%, #CDF4FF 86.04%);
         }
-        .sales_item_logo{
+        .red{
             background: linear-gradient(201.18deg, #FFA3CF 3.14%, #FFD5F3 86.04%);
         }
     }
-}
-
-@media only screen and (max-width: 600px) {
-    .container_dashboard{
-        flex-wrap: nowrap;
+    .earning_title{
+        font-weight: 400;
+        font-size: 14px;
+        color: #ACACAC;
     }
-  }
+}
+.rdn{
+    min-width: 200px;
+}

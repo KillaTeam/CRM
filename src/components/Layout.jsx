@@ -2,13 +2,13 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import ButtonNav from "./ButtonNav";
 import logo from "../assets/svg/logo.svg";
-import "../scss/Layout.scss";
+import "../scss/ButtonNav.scss";
 
 const Layout = () => {
   return (
     <div>
       <div className="main-frame">
-        <div>
+        <div className="layout_container">
           <div className="img__container">
             <img src={logo} alt="" /> <span>v1</span>
           </div>
