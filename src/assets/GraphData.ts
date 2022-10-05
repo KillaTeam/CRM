@@ -1,4 +1,4 @@
-const GraphData = [
+const GraphBarData = [
     {
       name: "Jan",
       uv: 4000,
@@ -79,4 +79,4 @@ const GraphData = [
 
     
   ];
-  export default GraphData;
+  export default GraphBarData;

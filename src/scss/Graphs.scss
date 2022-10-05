@@ -1,120 +1,52 @@
-// Second block
-.second_block_container{
-    display: flex;
-    margin-top: 20px;
-    flex: 2 3 50%;
-    background-color: #FFFFFF;
-    border-radius: 30px;
-    line-height: 0px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.graphs_container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px;
 }
-
-
-        
-        .overview_top_text{
-            color: #ACACAC;
-            font-size: 14px;
-            padding-left: 35px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding-top: 20px;
-            
-            h1{
-                font-size: 25px;
-                font-weight: 600;
-                color: black;
-                line-height: 33px;
-            }
-        }
-        .overview_top_button{
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            font-size: 14px;
-            font-weight: 400;
-            color: #7E7E7E;
-
-            margin-right: 35px;
-            background-color: #F9FBFF;
-            height: 38px;
-            width: 118px;
-            border-radius: 10px;
-            
-            span{
-                padding-right: 18px;
-            }
-        }
-    
-    .overview_grafic{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        .stats_div{
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: flex-start;
-            align-items: flex-start;
-            height: 255px;
-            
-            width: 45px;
-            .stats_mouth{
-                display: flex;
-
-                justify-content: center;
-                width: 31px;
-                margin-top: 10px;
-                font-size: 10px;
-                font-weight: 500;
-                color: #4F4F4F;
-                font-style: normal;
-            }
-            .stats_stolb{
-                background-color: #F2EFFF;
-                border-radius: 8px;
-                width: 31px;
-                height: 111px;
-            }
-        }
-    }
-
-
-
-
-// @media only screen and (max-width: 600px) {
-//     .container_dashboard{
-//         flex-wrap: nowrap;
-//     }
-//   }
-.graphs_container{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.graph_bar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  border-radius: 30px;
+  background-color: #ffffff;
 }
-.graph_bar{
-    display: flex;
-    flex-direction: column;
-
+.graph_don {
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  display: flex;
+}
+.jcc {
+  justify-content: center;
+}
+.acc {
+  align-items: center;
+}
+.text__graph_bar {
+  display: flex;
+  justify-content: space-around;
+}
+.text__graph_bar {
+  align-items: baseline;
+}
+.btn_dropdown {
+  border-radius: 10px;
+}
+.rdn-control {
+  min-width: 200px;
+  border-radius: 30px !important;
+}
+.graph_don_text{
+  text-align: center;
 }
 .graph_don{
-    display: flex;
-    
-}
-.flex{
-    display: flex;
-}
-.jcc{
-    justify-content: center;
-}
-.acc{
-    align-items: center;
-}
-.text__graph_bar{
-    display: flex;
-    justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: 30px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

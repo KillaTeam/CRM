@@ -1,101 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
-.container_dashboard{
-    font-family: Poppins, sans-serif;
+.container_dashboard {
+  font-family: Poppins, sans-serif;
+  display: flex;
+  margin-left: 50px;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 50px;
+  
+  main {
     display: flex;
-    margin-left: 50px;
-    justify-content: center;
     flex-direction: column;
+    justify-content: space-between;
+  }
+  .header_dashboard {
+    width: 100%;
+    margin-top: 41px;
+    margin-bottom: 24px;
     margin-right: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #f8fafe;
+  }
 
-    main{
+  .earnig_dashboard {
+    display: flex;
+    width: 100%;
+    border-radius: 30px;
+    justify-content: space-around;
+    background-color: #ffffff;
+
+    .earning_item {
+      display: flex;
+
+      margin-top: 32px;
+      margin-bottom: 35px;
+      max-height: 84px;
+
+      .earning_content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-    }
-    .header_dashboard{
-        width: 100%;
-        margin-top: 41px;
-        margin-bottom: 24px;
-        margin-right: 50px;
+        padding-left: 20px;
+      }
 
-        font-size: 24px;
-        font-weight: 500;
-        background-color: #f8fafe;
-    }
-
-    .earnig_dashboard{
+      .earning_number {
+        color: #333333;
+        font-size: 34px;
+        font-weight: 600;
+      }
+      .earning_mount {
         display: flex;
-
-        width: 100%;
-        border-radius: 30px;
-        justify-content: space-around;
-        background-color: #ffffff;
-
-        .earning_item{
-            display: flex;
-            
-            margin-top: 32px;
-            margin-bottom: 35px;
-            max-height: 84px;
-
-            .earning_content{
-                display: flex;
-                flex-direction: column;
-                padding-left: 20px;
-            }
-            
-            .earning_number{
-                color:#333333;
-                font-size: 34px;
-                font-weight: 600;
-            }
-            .earning_mount{
-                display: flex;
-                align-items: center;
-                font-weight: 400;
-                font-size: 12px;
-            }
-            .procent_green{
-                font-weight: 700;
-                color: #00AC4F;
-            }
-            .procent_red{
-                font-weight: 700;
-                color: #D0004B;
-            }
-        }
-
-        .earnig_item_logo{
-
-            padding: 21px;
-            border-radius: 50%;
-            
-        }
-        .green{
-            background: linear-gradient(201.18deg, #c9ffe1 3.14%, #EFFFF6 86.04%);
-        }
-        .blue{
-            background: linear-gradient(201.18deg, #CAF1FF 3.14%, #CDF4FF 86.04%);
-        }
-        .red{
-            background: linear-gradient(201.18deg, #FFA3CF 3.14%, #FFD5F3 86.04%);
-        }
-    }
-    .earning_title{
+        align-items: center;
         font-weight: 400;
-        font-size: 14px;
-        color: #ACACAC;
+        font-size: 12px;
+      }
+      .procent_green {
+        font-weight: 700;
+        color: #00ac4f;
+      }
+      .procent_red {
+        font-weight: 700;
+        color: #d0004b;
+      }
     }
-}
-.rdn{
-    min-width: 200px;
+
+    .earnig_item_logo {
+      padding: 21px;
+      border-radius: 50%;
+    }
+    .green {
+      background: linear-gradient(201.18deg, #c9ffe1 3.14%, #effff6 86.04%);
+    }
+    .blue {
+      background: linear-gradient(201.18deg, #caf1ff 3.14%, #cdf4ff 86.04%);
+    }
+    .red {
+      background: linear-gradient(201.18deg, #ffa3cf 3.14%, #ffd5f3 86.04%);
+    }
+  }
+  .earning_title {
+    font-weight: 400;
+    font-size: 14px;
+    color: #acacac;
+  }
 }
