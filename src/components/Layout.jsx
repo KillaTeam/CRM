@@ -13,6 +13,16 @@ const Layout = () => {
             <img src={logo} alt="" /> <span>v1</span>
           </div>
           <ButtonNav />
+          <button className="account_block">
+            <div className="account_left_side">
+              <img src={123} alt="avatar" />
+              <div className="account_text">
+                <h4>Evano</h4>
+                <p>Project Manager</p>
+              </div>
+            </div>
+            <img src={123} alt="arrow" />
+          </button>
         </div>
         <Outlet />
       </div>
