@@ -1,20 +1,19 @@
-const mongoose = require("mongoose");
-const express = require("express");
-const app = express();
-const cors = require("cors");
-const PORT = 4000;
+const mongoose = require('mongoose');
+const axios = require('axios');
+const db = mongoose.connection;
 
-app.use(cors());
-mongoose.connect("mongodb:////root:<password>@clusterkill.pqxfdjt.mongodb.net/test", {
-  useNewUrlParser: true
-});
+mongoose.connect(`mongodb+srv://root:7bHe8PsFfJbhfWCc@clusterkill.pqxfdjt.mongodb.net/?retryWrites=true&w=majority`, {useNewUrlParser: true }, function (err) {
+ 
+    if (err) throw err;
+ 
+    console.log('Successfully connected');
+  
+ });
 
-const connection = mongoose.connection;
+// Schema
 
-connection.once("open", function() {
-  console.log("Connection with MongoDB was successful");
-});
+ var repSchema = mongoose.Schema({
+    name: String,
+ })
 
-app.listen(PORT, function() {
-  console.log("Server is running on Port: " + PORT);
-});
+ var Data = mongoose.model('Data', repSchema);
