@@ -72,7 +72,7 @@ const Main = () => {
                 innerRadius={0.55}
                 data={GraphDonData}
                 colors={colors}
-                style={{border:"none"}}
+                // style={{border:"none"}}
               />
               ;
             </div>
