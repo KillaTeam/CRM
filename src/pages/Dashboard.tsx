@@ -103,7 +103,7 @@ const Main = () => {
               </div>
             </div>
             <div className="shop_store_container">
-                <div  className="PName">Product Name Dima</div>
+                <div  className="PName">Product Name</div>
                 <div  className="SPT">Stock</div>
                 <div  className="SPT">Price</div>
                 <div className="SPT">Total Sales</div>
