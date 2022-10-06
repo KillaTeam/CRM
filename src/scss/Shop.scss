@@ -1,14 +1,16 @@
+:root {
+    --shadow: 0px 0px 13px -5px rgba(66, 68, 90, 1);
+    
+}
 input,
 button,
 textarea,
 select {
-  font: inherit;
+font: inherit;
 }
 
 .shop_container{
-    -webkit-box-shadow: 0px 0px 52px -51px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 0px 52px -51px rgba(66, 68, 90, 1);
-    box-shadow: 0px 0px 52px -51px rgba(66, 68, 90, 1);
+    box-shadow: var(--shadow);
     margin-top: 38px;
     border-radius: 30px;
     background: #ffffff;
@@ -44,16 +46,18 @@ select {
             height: 30px;
         }  
     }
+    .nav_shop{
+        display: flex;
+        justify-content: flex-start;
+        padding-right: 20px;
+    }
     input{
         height: 48px;
         border: 0px;
         background-color: rgba(255, 0, 0, 0);
+        border-radius: 20px;
     }
     select {
-        -webkit-box-shadow: 0px 0px 52px -51px rgba(66, 68, 90, 1);
-        -moz-box-shadow: 0px 0px 52px -51px rgba(66, 68, 90, 1);
-        box-shadow: 0px 0px 52px -51px rgba(66, 68, 90, 1);
-
         padding: 10px;
         height: 50px;
         background: #F9FBFF;
@@ -61,6 +65,16 @@ select {
         border-radius: 20px;
 
     }
-    
-
+}
+.shop_store_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .PName{
+        flex-grow: 5;
+    }
+    .SPT{
+        flex-grow: 1;
+    }
 }

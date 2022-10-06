@@ -90,23 +90,39 @@ const Main = () => {
             </div>
           </div>
           <div className="shop_container">
-            
             <div className="shop_menu">
               <h2>Product Sell</h2>
               <div className="shop_search">
-                <div>
+                <div className="nav_shop">
                   <img src={svgShop} alt="svgShop" />
                   <input type="text" value={menuSearch} onChange={e => setMenuSeatch('' + e.target.value)}/>
                 </div>
-                
-                
                 <select name="days_select" id="days_select">
                   <option value="">Last 30 days</option>
                 </select>
               </div>
-              
-              
             </div>
+            <div className="shop_store_container">
+                <div  className="PName">Product Name</div>
+                <div  className="SPT">Stock</div>
+                <div  className="SPT">Price</div>
+                <div className="SPT">Total Sales</div>
+                <div>
+                  <div className="PName store_desc"> 
+                    <img src="" alt="" />
+                    <p></p>
+                  </div>
+                  <div className="SPT"> 
+                    <p></p>
+                  </div>
+                  <div className="SPT"> 
+                    <p></p>
+                  </div>
+                  <div className="SPT"> 
+                    <p></p>
+                  </div>
+                </div>
+              </div>
           </div>
         </main>
       </div>
