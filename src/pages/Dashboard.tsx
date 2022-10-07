@@ -12,6 +12,7 @@ import "@progress/kendo-theme-default/dist/all.scss";
 import '../scss/Shop.scss'
 
 import svgShop from '../assets/svg/menu_search.svg'
+import img1 from '../assets/png/abstract.png'
 
 // import arrow_overview_menu from "../assets/svg/vector.svg";
 // import GraphData from "../assets/GraphData";
@@ -90,6 +91,7 @@ const Main = () => {
             </div>
           </div>
           <div className="shop_container">
+
             <div className="shop_menu">
               <h2>Product Sell</h2>
               <div className="shop_search">
@@ -102,28 +104,27 @@ const Main = () => {
                 </select>
               </div>
             </div>
-            <div className="shop_store_container">
-                <div  className="PName">Product Name</div>
-                <div  className="SPT">Stock</div>
-                <div  className="SPT">Price</div>
-                <div className="SPT">Total Sales</div>
-                <div>
-                  <div className="PName store_desc"> 
-                    <img src="" alt="" />
-                    <p></p>
-                  </div>
-                  <div className="SPT"> 
-                    <p></p>
-                  </div>
-                  <div className="SPT"> 
-                    <p></p>
-                  </div>
-                  <div className="SPT"> 
-                    <p></p>
-                  </div>
-                </div>
-              </div>
+
+            <table className="shop_store_names">
+              <tr>
+                <th className="PName">Product Name</th>
+                <th className="SPT">Stock</th>
+                <th className="SPT">Price</th>
+                <th className="SPT">Total Sales</th>
+              </tr>
+              {/* Items */}
+              <tr>
+                <td className="PName">
+                  <img src={img1} alt="img1" />
+                  <div className="title_desc"><h1>Absract 3D</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> </div>
+                </td>
+                <td className="SPT SPT_item">32 in stock</td>
+                <td className="SPT SPT_item">$ 45.99</td>
+                <td className="SPT SPT_item">20</td>          
+              </tr>
+            </table>
           </div>
+
         </main>
       </div>
 

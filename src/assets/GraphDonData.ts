@@ -1,16 +1,18 @@
 const GraphDonData = [
+    
     {
       label: "Customers",
-      value: 45,
+      value: 40,
+    },
+    {
+      label: "Stats",
+      value: 35,
+      isEmpty: true,
     },
     {
       label: "New Customers",
       value: 25,
     },
-    {
-      label: "Stats",
-      value: 30,
-      isEmpty: true,
-    },
+    
   ];
   export default GraphDonData;
