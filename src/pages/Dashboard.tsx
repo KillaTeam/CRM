@@ -122,6 +122,33 @@ const Main = () => {
                 <td className="SPT SPT_item">$ 45.99</td>
                 <td className="SPT SPT_item">20</td>          
               </tr>
+              <tr>
+                <td className="PName">
+                  <img src={img1} alt="img1" />
+                  <div className="title_desc"><h1>Absract 3D</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> </div>
+                </td>
+                <td className="SPT SPT_item">32 in stock</td>
+                <td className="SPT SPT_item">$ 45.99</td>
+                <td className="SPT SPT_item">20</td>          
+              </tr>
+              <tr>
+                <td className="PName">
+                  <img src={img1} alt="img1" />
+                  <div className="title_desc"><h1>Absract 3D</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> </div>
+                </td>
+                <td className="SPT SPT_item">32 in stock</td>
+                <td className="SPT SPT_item">$ 45.99</td>
+                <td className="SPT SPT_item">20</td>          
+              </tr>
+              <tr>
+                <td className="PName">
+                  <img src={img1} alt="img1" />
+                  <div className="title_desc"><h1>Absract 3D</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> </div>
+                </td>
+                <td className="SPT SPT_item">32 in stock</td>
+                <td className="SPT SPT_item">$ 45.99</td>
+                <td className="SPT SPT_item">20</td>          
+              </tr>
             </table>
           </div>
 

@@ -26,7 +26,7 @@ const Layout = () => {
         </div>
         <Outlet />
       </div>
-      <footer>DEV MODE KILLAHTEAM V1</footer>
+      {/* <footer>DEV MODE KILLAHTEAM V1</footer> */}
     </div>
   );
 };
