@@ -1,19 +1,27 @@
+require('dotenv').config()
+const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
-const axios = require('axios');
-const db = mongoose.connection;
+const cookieParser = require('cookie-parser');
+const router = require('./router/index');
 
-mongoose.connect(`mongodb+srv://root:7bHe8PsFfJbhfWCc@clusterkill.pqxfdjt.mongodb.net/?retryWrites=true&w=majority`, {useNewUrlParser: true }, function (err) {
- 
-    if (err) throw err;
- 
-    console.log('Successfully connected');
-  
- });
+const PORT = process.env.PORT || 5000;
+const app = express();
 
-// Schema
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors());
+app.use('/api', router);
 
- var repSchema = mongoose.Schema({
-    name: String,
- })
-
- var Data = mongoose.model('Data', repSchema);
+const start = async () => {
+   try{
+      await mongoose.connect(process.env.DB_URL, {
+         useNewUrlParser: true,
+         useUnifiedTopology: true
+      })
+      app.listen(PORT, () => console.log(`Server started on PORT: ${PORT}`));
+   }catch(e){
+      console.log(e);
+   }
+}
+start()
