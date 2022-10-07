@@ -16,7 +16,7 @@ class UserController {
     // }
     async get_user_data(req, res, next){
         try {
-            
+            res.json(['123', '456'])
         } catch (e) {
             console.log(e);
         }
