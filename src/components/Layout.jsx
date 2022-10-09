@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import ButtonNav from "./ButtonNav";
 import logo from "../assets/svg/logo.svg";
