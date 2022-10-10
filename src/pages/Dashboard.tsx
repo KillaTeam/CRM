@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import EarningList from "../components/EarningList";
 import ShopList from "../components/ShopList";
 import dashLocals from "../data/Dashboard/Dashboard_item_money";
@@ -7,16 +7,43 @@ import "react-dropdown-now/style.css";
 import "../scss/Dashboard.scss";
 import "../scss/Graphs.scss";
 import "@progress/kendo-theme-default/dist/all.scss";
+
 import "../scss/Shop.scss";
+
+import '../scss/Shop.scss'
+import axios from "axios";
+
+
 
 // import arrow_overview_menu from "../assets/svg/vector.svg";
 // import GraphData from "../assets/GraphData";
 // import GraphDon from "../components/GraphDon";
 // import NavGraphData from "../assets/NavGraphData";
 
-const Main = () => {
-  const [menuSearch, setMenuSeatch] = useState("Search");
 
+
+const Main = () => {
+
+  const username = "Evano"
+
+  const AxiosPostRequest = async() => {
+    const options = {
+      method: 'POST',
+      url: 'http://localhost:5000/api/dashboard',
+      data: {name: username}
+    };
+    
+    axios.request(options).then(function (response: { data: any; }) {
+      console.log(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
+  }
+  useEffect(() => {
+    AxiosPostRequest()
+  })
+
+  const [menuSearch, setMenuSeatch] = useState('Search');
   const colors = [
     "#e91e63",
     "#9c27b0",
@@ -36,6 +63,8 @@ const Main = () => {
     "#795548",
     "#607d8b",
   ];
+
+  
 
   return (
     <div style={{ flex: "2 0 50%" }} className="main_container">
@@ -62,6 +91,8 @@ const Main = () => {
             </div>
           </div>
           <ShopList shopLocals={shopLocals} />
+          <ShopList shopLocals={shopLocals}/>
+
         </main>
       </div>
 

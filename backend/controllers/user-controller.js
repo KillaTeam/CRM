@@ -1,3 +1,5 @@
+const UserService = require("../services/user-service");
+
 class UserController {
     // async registration (req, res, next){
     //     try {
@@ -14,9 +16,10 @@ class UserController {
     //         console.log(e);
     //     }
     // }
-    async get_user_data(req, res, next){
+    async getUserData(req, res, next){
         try {
-            res.json(['123', '456'])
+            const userData = await UserService.getData(req.body.name);
+            return res.json(userData)
         } catch (e) {
             console.log(e);
         }
