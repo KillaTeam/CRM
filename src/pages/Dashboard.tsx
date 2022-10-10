@@ -26,6 +26,16 @@ const Main = () => {
 
   const username = "Evano"
 
+  interface IDashData{
+    id: number,
+    name: string,
+    earning_money: number,
+    balance: number,
+    total_sales: number,
+  }
+
+  const [DashData, setDashData] = useState<IDashData>()
+
   const AxiosPostRequest = async() => {
     const options = {
       method: 'POST',
@@ -33,8 +43,8 @@ const Main = () => {
       data: {name: username}
     };
     
-    axios.request(options).then(function (response: { data: any; }) {
-      console.log(response.data);
+    axios.request(options).then(function (response: { data: IDashData; }) {
+      return setDashData(response.data);
     }).catch(function (error) {
       console.error(error);
     });
@@ -42,8 +52,7 @@ const Main = () => {
   useEffect(() => {
     AxiosPostRequest()
   })
-
-  const [menuSearch, setMenuSeatch] = useState('Search');
+  
   const colors = [
     "#e91e63",
     "#9c27b0",
@@ -69,7 +78,7 @@ const Main = () => {
   return (
     <div style={{ flex: "2 0 50%" }} className="main_container">
       <div className="container_dashboard">
-        <header className="header_dashboard">Hello Your_name 👋🏼,</header>
+        <header className="header_dashboard">Hello {DashData?.name} 👋🏼,</header>
         <main>
           <EarningList dashLocals={dashLocals}></EarningList>
 

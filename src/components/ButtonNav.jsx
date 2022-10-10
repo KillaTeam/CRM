@@ -19,7 +19,6 @@ const ButtonNav = () => {
         <NavLink className={`btn${togleClassCheck}`} to={to[index]} key={index}>
           <img src={svg[index]} className='img__big margin'  alt="SVG" fill={togleFillCheck} stroke={togleFillCheck} />
           {name}
-          { console.log(index)}
         </NavLink>
       ))}
       

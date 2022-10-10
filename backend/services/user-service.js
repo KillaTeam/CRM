@@ -9,14 +9,14 @@ class UserService{
     async getData(name){
         const user = await UserModul.findOne({name});
         if(!user){
-            return {"Error": "User not found"};
+            return {"Error": "Пользователь не найден"};
         }
         return user;
     }
     async registration(name, password){
         const candidate = await userModule.findOne({name});
         if(candidate){
-            throw new Error('Пользователь не найден');
+            return {"Error" : "Пользователь не найден"};
         }
         const hash_pasword = await bcrypt.hash(password, 3);
         const add_user = await userModule.updateOne({name: name},{name: name, password: hash_pasword});
