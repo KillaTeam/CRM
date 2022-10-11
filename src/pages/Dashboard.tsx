@@ -31,14 +31,15 @@ const Main = () => {
     };
     
     axios.request(options).then(function (response) {
-      setDashData(response.data);
+      console.log(response.data)
+      return setDashData(response.data);
     }).catch(function (error) {
       console.error(error);
     });
   };
   useEffect(() => {
     AxiosPostRequest();
-  });
+  }, []);
 
   const colors = [
     "#e91e63",

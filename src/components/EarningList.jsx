@@ -5,7 +5,7 @@ import EarningItem from './EarningItem';
 const EarningList = ({dashLocals}) => {
     return(
         <div className='earnig_dashboard'>
-            {dashLocals.map(dashLocal => <EarningItem dashLocal={dashLocal}/>)}
+            {/* {dashLocals.map(dashLocal => <EarningItem dashLocal={dashLocal}/>)} */}
         </div>
  )
 }
