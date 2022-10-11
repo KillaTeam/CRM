@@ -7,11 +7,10 @@ import "react-dropdown-now/style.css";
 import "../scss/Dashboard.scss";
 import "../scss/Graphs.scss";
 import "@progress/kendo-theme-default/dist/all.scss";
-
 import "../scss/Shop.scss";
-
 import '../scss/Shop.scss'
 import axios from "axios";
+
 
 
 
@@ -89,7 +88,6 @@ const Main = () => {
                   <h2>Overview</h2>
                   <p>Monthly Earning</p>
                 </div>
-                {/*  */}
               </div>
             </div>
             <div className="graph_don">
@@ -100,7 +98,6 @@ const Main = () => {
             </div>
           </div>
           <ShopList shopLocals={shopLocals} />
-          <ShopList shopLocals={shopLocals}/>
 
         </main>
       </div>
