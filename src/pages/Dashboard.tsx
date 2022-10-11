@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import EarningList from "../components/EarningList";
 import ShopList from "../components/ShopList";
-import dashLocals from "../data/Dashboard/Dashboard_item_money";
 import shopLocals from "../data/Dashboard/Shop_data";
 import GraphBarQuart from "../components/GraphBarQuart";
-import { Dropdown } from "react-dropdown-now";
+// import { Dropdown } from "react-dropdown-now";
 import DonutChart from "react-donut-chart";
 import GraphDonData from "../assets/GraphDonData";
 import "react-dropdown-now/style.css";
@@ -13,42 +12,29 @@ import "../scss/Graphs.scss";
 import "@progress/kendo-theme-default/dist/all.scss";
 import "../scss/Shop.scss";
 import "../scss/Shop.scss";
+
+import { IDash } from "../types/IDash";
 import axios from "axios";
-
-
-// import arrow_overview_menu from "../assets/svg/vector.svg";
-// import GraphData from "../assets/GraphData";
-// import GraphDon from "../components/GraphDon";
-// import NavGraphData from "../assets/NavGraphData";
 
 const Main = () => {
   const username = "Evano";
 
-  interface IDashData {
-    id: number;
-    name: string;
-    earning_money: number;
-    balance: number;
-    total_sales: number;
-  }
+  
 
-  const [DashData, setDashData] = useState<IDashData>();
+  const [DashData, setDashData] = useState<IDash>();
 
-  const AxiosPostRequest = async () => {
+  const AxiosPostRequest = () => {
     const options = {
-      method: "POST",
-      url: "http://localhost:5000/api/dashboard",
-      data: { name: username },
+      method: 'POST',
+      url: 'http://localhost:5000/api/dashboard',
+      data: {name: username}
     };
-
-    axios
-      .request(options)
-      .then(function (response: { data: IDashData }) {
-        return console.log(response.data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    
+    axios.request(options).then(function (response) {
+      setDashData(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
   };
   useEffect(() => {
     AxiosPostRequest();
@@ -73,13 +59,12 @@ const Main = () => {
     "#795548",
     "#607d8b",
   ];
-
   return (
     <div style={{ flex: "2 0 50%" }} className="main_container">
       <div className="container_dashboard">
         <header className="header_dashboard">Hello {DashData?.name} 👋🏼,</header>
         <main>
-          <EarningList dashLocals={dashLocals}></EarningList>
+          <EarningList dashLocals={DashData?.statsDashBoard}></EarningList>
           <div className="graphs_container">
             <div className="graph_bar">
               <div className="text__graph_bar">

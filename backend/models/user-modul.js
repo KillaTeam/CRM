@@ -2,9 +2,9 @@ const {Schema, model} = require('mongoose');
 
 const UserSchema = new Schema({
     name: {type: String, unique: true, required: true},
-    earning_money: {type: Number, default: 0},
-    balance: {type: Number, default: 0},
-    total_sales: {type: Number, default: 0},
+    statsDashBoard:[
+        {id: {type: Number}, stat_name: {type: String}, svgElement: {type: String}, money: {type: Number}, color: {type: String}}
+    ],
     month:[{
         Year:{type: Number},    
         Jan:{type: Number},
