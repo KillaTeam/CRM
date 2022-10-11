@@ -6,8 +6,8 @@ const UserModul = require("../models/user-modul")
 
 
 class UserService{
-    async getData(name){
-        const user = await UserModul.findOne({name});
+    async getData(){
+        const user = await UserModul.findOne({name: "Evano"});
         if(!user){
             return {"Error": "Пользователь не найден"};
         }

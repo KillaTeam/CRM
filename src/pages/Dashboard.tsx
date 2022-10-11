@@ -17,29 +17,47 @@ import { IDash } from "../types/IDash";
 import axios from "axios";
 
 const Main = () => {
-  const username = "Evano";
 
-  
+  var DashData:IDash = {
+    id: 0,
+    name: '',
+    statsDashBoard:[
+      {
+        stat_name: '',
+        svgElement: '',
+        money: 0,
+        color: '',
+      }]
+  }
 
-  const [DashData, setDashData] = useState<IDash>();
-
-  const AxiosPostRequest = () => {
-    const options = {
-      method: 'POST',
-      url: 'http://localhost:5000/api/dashboard',
-      data: {name: username}
-    };
+  const AxiosPostRequest = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/dashboard", {
+        method: 'GET',
+        headers: {}
+      });
     
-    axios.request(options).then(function (response) {
-      console.log(response.data)
-      return setDashData(response.data);
-    }).catch(function (error) {
-      console.error(error);
-    });
-  };
-  useEffect(() => {
+      if (response.ok) {
+        const result = await response.json();
+        DashData = result
+      }
+    } catch (err) {
+      console.error(err);
+    }
+    // const options = {method: 'GET', url: 'http://localhost:5000/api/dashboard'};
+
+    // axios.request(options).then(function (response) {
+    //   return (DashData = response.data);
+    // }).catch(function (error) {
+    //   console.error(error);
+    // });
+  }
+    useEffect(()=>{
     AxiosPostRequest();
-  }, []);
+  }, [])
+
+  console.log(DashData)
+    
 
   const colors = [
     "#e91e63",
